@@ -22,13 +22,20 @@ zeroButton.addEventListener("click", () => {
 //Clearing input
 let clear = document.getElementById("C");
 clear.addEventListener("click", () => {
-  if (input.value !== "") input.value = "0";
+  input.value = "";
 });
 
 //On-Off
 let onOff = document.getElementById("on_off");
 onOff.addEventListener("click", () => {
-  switchButton.placeholder = switchButton.placeholder === "Off" ? "On" : "Off";
+  if(switchButton.placeholder === "Off"){
+    switchButton.placeholder = "On"
+    input.value = "";
+  }
+  else{
+    switchButton.placeholder = "Off"
+    input.value = "";
+  }
 });
 
 //Operations
@@ -36,6 +43,7 @@ let operations = document.querySelectorAll(".operator");
 operations.forEach((op) => {
   op.addEventListener("click", () => {
     firstNum = parseFloat(input.value);
+    // input.value = op.textContent;
     operation = op.textContent;
   });
 });
