@@ -1,3 +1,5 @@
+import { calculation } from "./calculator_functions.js";
+
 let input = document.getElementById("input");
 
 let firstNum = null;
@@ -9,6 +11,11 @@ buttons.forEach((button) => {
   button.addEventListener("click", () => {
     if (input.value !== "") input.value = button.textContent;
   });
+});
+
+let zeroButton = document.getElementById("0");
+zeroButton.addEventListener("click", () => {
+  if (input.value !== "") input.value = zeroButton.textContent;
 });
 
 //Clearing input
@@ -35,43 +42,9 @@ operations.forEach((op) => {
 //Result
 let equals = document.getElementById("=");
 equals.addEventListener("click", () => {
-  let secondNum = parseFloat(input.value);
-  let result;
-
-  switch (operation) {
-    case "+":
-      result = add(firstNum, secondNum);
-      break;
-    case "-":
-      result = subtract(firstNum, secondNum);
-      break;
-    case "*":
-      result = multiply(firstNum, secondNum);
-      break;
-    case "/":
-      result = divide(firstNum, secondNum);
-      break;
-    default:
-      result = "Error";
+  if (input.value !== "") {
+    let secondNum = parseFloat(input.value);
+    calculation(firstNum,secondNum,operation);
   }
-
-  input.value = result;
-  firstNum = null;
-  secondNum = null;
 });
 
-function add(a, b) {
-  return a + b;
-}
-
-function subtract(a, b) {
-  return a - b;
-}
-
-function multiply(a, b) {
-  return a * b;
-}
-
-function divide(a, b) {
-  return a / b;
-}
