@@ -1,6 +1,7 @@
 import { calculation } from "./calculator_functions.js";
 
 let input = document.getElementById("input");
+let switchButton = document.querySelector(".switchButton");
 
 let firstNum = null;
 let operation = null;
@@ -9,7 +10,7 @@ let operation = null;
 let buttons = document.querySelectorAll(".number");
 buttons.forEach((button) => {
   button.addEventListener("click", () => {
-    if (input.value !== "") input.value = button.textContent;
+    if (switchButton.placeholder !== "Off") input.value = button.textContent;
   });
 });
 
@@ -27,7 +28,7 @@ clear.addEventListener("click", () => {
 //On-Off
 let onOff = document.getElementById("on_off");
 onOff.addEventListener("click", () => {
-  input.value = input.value === "" ? "0" : "";
+  switchButton.placeholder = switchButton.placeholder === "Off" ? "On" : "Off";
 });
 
 //Operations

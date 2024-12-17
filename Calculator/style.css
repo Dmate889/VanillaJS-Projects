@@ -45,6 +45,13 @@ input {
     box-sizing: border-box;
 }
 
+.switchButton{
+    width: 20%;
+    height: 10px;
+    position: absolute;
+    top: 10px;
+}
+
 .equals, .on_off {
     width: 90px;
     height: 60px;
