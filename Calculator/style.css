@@ -43,6 +43,7 @@ input {
     padding: 10px;
     text-align: center;
     box-sizing: border-box;
+    
 }
 
 .switchButton{
@@ -112,5 +113,12 @@ input {
         right: 90px;
         width: 30px;
         height: 130px;
+    }
+
+    .switchButton{
+        left: 5px;
+        top: 100px;
+        height: 80px;
+        width: 15%;
     }
 }
