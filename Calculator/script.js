@@ -10,13 +10,13 @@ let operation = null;
 let buttons = document.querySelectorAll(".number");
 buttons.forEach((button) => {
   button.addEventListener("click", () => {
-    if (switchButton.placeholder !== "Off") input.value = button.textContent;
+    if (switchButton.placeholder !== "Off") input.value += button.textContent;
   });
 });
 
 let zeroButton = document.getElementById("0");
 zeroButton.addEventListener("click", () => {
-  if (input.value !== "") input.value = zeroButton.textContent;
+  if (switchButton.placeholder !== "Off") input.value += zeroButton.textContent;
 });
 
 //Clearing input
@@ -43,6 +43,7 @@ let operations = document.querySelectorAll(".operator");
 operations.forEach((op) => {
   op.addEventListener("click", () => {
     firstNum = parseFloat(input.value);
+    input.value = "";
     // input.value = op.textContent;
     operation = op.textContent;
   });
@@ -54,6 +55,8 @@ equals.addEventListener("click", () => {
   if (input.value !== "") {
     let secondNum = parseFloat(input.value);
     calculation(firstNum,secondNum,operation);
+    firstNum = 0;
+    secondNum = 0;
   }
 });
 
