@@ -39,3 +39,11 @@ input, select {
     width: 100%;
     box-sizing: border-box;
 }
+
+input{
+    transition: background-color 0.5s;
+}
+
+input:hover{
+    background-color: lightgray;
+}
