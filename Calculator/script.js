@@ -16,7 +16,7 @@ buttons.forEach((button) => {
 
 let zeroButton = document.getElementById("0");
 zeroButton.addEventListener("click", () => {
-  if (switchButton.placeholder !== "Off") input.value += zeroButton.textContent;
+  if (switchButton.textContent !== "Off") input.value += zeroButton.textContent;
 });
 
 //Clearing input
