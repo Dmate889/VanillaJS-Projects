@@ -10,7 +10,7 @@ let operation = null;
 let buttons = document.querySelectorAll(".number");
 buttons.forEach((button) => {
   button.addEventListener("click", () => {
-    if (switchButton.placeholder !== "Off") input.value += button.textContent;
+    if (switchButton.textContent !== "Off") input.value += button.textContent;
   });
 });
 
@@ -28,12 +28,14 @@ clear.addEventListener("click", () => {
 //On-Off
 let onOff = document.getElementById("on_off");
 onOff.addEventListener("click", () => {
-  if(switchButton.placeholder === "Off"){
-    switchButton.placeholder = "On"
+  if(switchButton.textContent === "Off"){
+    switchButton.textContent = "On"
+    switchButton.classList.add("on");
     input.value = "";
   }
   else{
-    switchButton.placeholder = "Off"
+    switchButton.textContent = "Off"
+    switchButton.classList.remove("on");
     input.value = "";
   }
 });

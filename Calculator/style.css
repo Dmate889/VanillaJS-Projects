@@ -2,6 +2,7 @@ body {
     position: relative;
     margin: 0;
     padding: 0;
+    background-color: #f5f5f5;
 }
 
 .calculator_wrapper {
@@ -18,12 +19,14 @@ body {
     border: solid 0.5px;
     border-radius: 30px;
     box-sizing: border-box;
+    box-shadow: 2px 2px 20px black;
 }
 
 .buttons {
     display: flex;
     flex-direction: column;
     gap: 10px;
+    
 }
 
 button {
@@ -32,6 +35,8 @@ button {
     border-radius: 30px;
     border-width: 0.5px;
     display: inline-block;
+    background-color: #333333;
+    color: #ffffff;
 }
 
 button:hover{
@@ -47,15 +52,30 @@ input {
     padding: 10px;
     text-align: center;
     box-sizing: border-box;
-    
+    color: black;
+    font-family: monospace;
 }
 
 .switchButton{
     width: 20%;
-    height: 10px;
+    height: 20px;
     position: absolute;
     top: 10px;
+    background-color: #f5a623;
+    color: white;
+    
+
 }
+
+.switchButton:hover{
+    opacity: 1;
+}
+
+.switchButton.on{
+    background-color: #4a90e2
+}
+
+
 
 .equals, .on_off {
     width: 90px;
