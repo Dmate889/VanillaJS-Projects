@@ -47,3 +47,18 @@ input{
 input:hover{
     background-color: lightgray;
 }
+
+button{
+    border-radius: 30px;
+    border-width: 0.5px;
+    background-color: rgb(97, 97, 245);
+    color: white;
+    cursor: pointer;
+    height: 30px;
+    transition: background-color 0.5s;
+}
+
+button:hover{
+    background-color: white;
+    color: black;
+}
