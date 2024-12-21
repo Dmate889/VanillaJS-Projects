@@ -53,11 +53,11 @@ body {
 }
 
 .exchangecurrency {
-    width: 80%;
+    width: 90%;
     height: 40px;
     position: absolute;
     bottom: 10px;
-    left: 10%;
+    left: 10px;
     border-radius: 10px;
     transition: opacity 0.3s, background-color 0.3s;
     border: 1px solid #d1d5db; 
@@ -74,11 +74,11 @@ body {
 }
 
 .exchangeButton {
-    width: 80%;
+    width: 70%;
     height: 40px;
     position: absolute;
     bottom: 60px;
-    right: 10%;
+    left: 50px;
     border-radius: 10px;
     transition: opacity 0.3s, background-color 0.3s;
     background-color: #10b981; 
@@ -94,12 +94,17 @@ body {
     background-color: #059669; 
 }
 
+.exchangeButton:active {
+    transform: scale(0.95);
+    background-color: #047857; 
+}
+
 .exchangecurrency2{
-    width: 80%;
+    width: 90%;
     height: 40px;
     position: absolute;
     bottom: 10px;
-    left: 10%;
+    left: 10px;
     border-radius: 10px;
     transition: opacity 0.3s, background-color 0.3s;
     border: 1px solid #d1d5db; 

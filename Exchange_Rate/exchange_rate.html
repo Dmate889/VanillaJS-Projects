@@ -4,14 +4,14 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="exchange.css" />
-    <title>Grid Practice</title>
+    <title>Exchange API</title>
   </head>
   <body>
     <div class="wrapper">
       <div class="currencies1">
         <label>Provide the amount of currency</label>
-        <input type="number" />
-        <select class="exchangecurrency" name="exchange" id="exchange">
+        <input type="number" id="inputFrom"/>
+        <select class="exchangecurrency" name="exchange" id="exchange1">
             <option value="HUF">HUF</option>
             <option value="EUR">EUR</option>
             <option value="GBP">GBP</option>
@@ -20,8 +20,8 @@
       </div>
       <div class="currencies2">
         <label>Currency after exchange</label>
-        <input type="text" readonly="true" type="number"/>
-        <select class="exchangecurrency2" name="exchange" id="exchange">
+        <input readonly="true" type="number" id="inputTo"/>
+        <select class="exchangecurrency2" name="exchange" id="exchange2">
           <option value="HUF">HUF</option>
           <option value="EUR">EUR</option>
           <option value="GBP">GBP</option>
@@ -31,4 +31,5 @@
       </div>
     </div>
   </body>
+  <script src="exchangeCalc.js"></script>
 </html>
