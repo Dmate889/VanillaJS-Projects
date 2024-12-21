@@ -1,64 +1,116 @@
 body {
-    font-family: Arial, sans-serif;
-    margin: 0;
     display: flex;
+    flex-direction: row;
     justify-content: center;
     align-items: center;
     height: 100vh;
-    background-color: #f0f0f0;
+    margin: 0;
+    background-color: #f3f4f6; 
 }
 
 .wrapper {
+    border: none;
+    height: 35vh;
+    width: 50%;
     display: grid;
-    grid-template-columns: 1fr 1fr; 
-    gap: 20px; 
-    width: 90%;
-    max-width: 600px;
-    padding: 20px;
-    background: white;
-    border: solid 1px #ddd;
-    border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    grid-template-columns: 1fr 1fr;
+    box-shadow: 2px 2px 50px rgba(0, 0, 0, 0.1);
+    background-color: #ffffff; 
+    border-radius: 10px; 
 }
 
-.form, .currencies {
+.currencies1, .currencies2 {
     display: grid;
-    grid-template-rows: auto; 
-    gap: 10px; 
+    grid-template-rows: 1fr 1fr 1fr 1fr;
+    margin-top: 20px;
+    position: relative;
 }
 
-label {
-    margin-bottom: 5px;
+.currencies1 input, .currencies2 input {
+    height: 50%;
+    width: 80%;
+    margin-left: 25px;
+    border-radius: 10px;
+    transition: background-color 0.3s, border-color 0.3s;
+    border: 1px solid #d1d5db; 
+    padding: 5px;
+    font-size: 14px;
+    background-color: #f9fafb; 
+}
+
+.currencies1 input:hover, .currencies2 input:hover {
+    background-color: #e5e7eb; 
+    border-color: #9ca3af; 
+}
+
+.currencies1 label, .currencies2 label {
+    height: 30%;
+    width: 80%;
+    margin-left: 25px;
+    color: #4b5563; 
+    font-size: 16px;
     font-weight: bold;
 }
 
-input, select {
-    padding: 8px;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-    width: 100%;
-    box-sizing: border-box;
-}
-
-input{
-    transition: background-color 0.5s;
-}
-
-input:hover{
-    background-color: lightgray;
-}
-
-button{
-    border-radius: 30px;
-    border-width: 0.5px;
-    background-color: rgb(97, 97, 245);
-    color: white;
+.exchangecurrency {
+    width: 80%;
+    height: 40px;
+    position: absolute;
+    bottom: 10px;
+    left: 10%;
+    border-radius: 10px;
+    transition: opacity 0.3s, background-color 0.3s;
+    border: 1px solid #d1d5db; 
+    background-color: #ffffff; 
+    color: #374151;
+    font-size: 14px;
+    font-weight: bold;
     cursor: pointer;
-    height: 30px;
-    transition: background-color 0.5s;
 }
 
-button:hover{
-    background-color: white;
-    color: black;
+.exchangecurrency:hover {
+    opacity: 0.8;
+    background-color: #f3f4f6; 
+}
+
+.exchangeButton {
+    width: 80%;
+    height: 40px;
+    position: absolute;
+    bottom: 60px;
+    right: 10%;
+    border-radius: 10px;
+    transition: opacity 0.3s, background-color 0.3s;
+    background-color: #10b981; 
+    color: #ffffff; 
+    font-size: 16px;
+    font-weight: bold;
+    border: none;
+    cursor: pointer;
+}
+
+.exchangeButton:hover {
+    opacity: 0.9;
+    background-color: #059669; 
+}
+
+.exchangecurrency2{
+    width: 80%;
+    height: 40px;
+    position: absolute;
+    bottom: 10px;
+    left: 10%;
+    border-radius: 10px;
+    transition: opacity 0.3s, background-color 0.3s;
+    border: 1px solid #d1d5db; 
+    background-color: #ffffff; 
+    color: #374151;
+    font-size: 14px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.exchangecurrency2:hover {
+    opacity: 0.8;
+    background-color: #f3f4f6; 
 }

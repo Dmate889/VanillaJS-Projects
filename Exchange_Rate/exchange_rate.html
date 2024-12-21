@@ -4,36 +4,31 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="exchange.css" />
-    <title>Weather API</title>
+    <title>Grid Practice</title>
   </head>
   <body>
     <div class="wrapper">
-        <div class="form">
-            <label for="input1">Provide currency amount</label>
-            <input type="text" id="input1">
-
-            <label for="dropdown1">From</label>
-            <select id="dropdown1">
-                <option value="option1">HUF</option>
-                <option value="option2">EUR</option>
-                <option value="option3">GBP</option>
-                <option value="option4">USD</option>
-            </select>
-        </div>
-        <div class="currencies">
-            <label for="input2">Currency after exchange</label>
-            <input type="text" id="input2">
-
-            <label for="dropdown2">To</label>
-            <select id="dropdown2">
-                <option value="option1">HUF</option>
-                <option value="option2">EUR</option>
-                <option value="option3">GBP</option>
-                <option value="option4">USD</option>
-            </select>
-          </div>
-          <button>Exchange</button>
-        </div>
+      <div class="currencies1">
+        <label>Provide the amount of currency</label>
+        <input type="number" />
+        <select class="exchangecurrency" name="exchange" id="exchange">
+            <option value="HUF">HUF</option>
+            <option value="EUR">EUR</option>
+            <option value="GBP">GBP</option>
+            <option value="USD">USD</option>
+          </select>
+      </div>
+      <div class="currencies2">
+        <label>Currency after exchange</label>
+        <input type="text" readonly="true" type="number"/>
+        <select class="exchangecurrency2" name="exchange" id="exchange">
+          <option value="HUF">HUF</option>
+          <option value="EUR">EUR</option>
+          <option value="GBP">GBP</option>
+          <option value="USD">USD</option>
+        </select>
+        <button class="exchangeButton">Exchange!</button>
+      </div>
+    </div>
   </body>
-  <script src="exchangeCalc.js"></script>
 </html>
