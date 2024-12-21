@@ -9,14 +9,16 @@ submitButton.addEventListener("click", async () => {
   let toSelect = document.getElementById("exchange2").value;
 
   //Inputs
-  let fromInput = document.getElementById("inputFrom").value;
-  let toInput = document.getElementById("inputTo").value;
+  let fromInput = parseFloat(document.getElementById("inputFrom").value);
+  let toInput = document.getElementById("inputTo");
 
   const result = await fetchingData(fromSelect);
+  console.log(result);
 
   const rate = result[toSelect];
+  console.log(rate);
 
-  toInput.value = exchangeCalculation(fromInput,rate);
+  toInput.value = exchangeCalculation(fromInput,rate).toFixed(2);
 });
 
 async function fetchingData(currencyType) {
