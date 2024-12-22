@@ -4,6 +4,7 @@ const API_KEY = "44300e08fb2c19431cc5ebe5";
 let submitButton = document.querySelector(".exchangeButton");
 
 submitButton.addEventListener("click", async () => {
+  
   //Dropdowns
   let fromSelect = document.getElementById("exchange1").value;
   let toSelect = document.getElementById("exchange2").value;
