@@ -14,10 +14,8 @@ submitButton.addEventListener("click", async () => {
   let toInput = document.getElementById("inputTo");
 
   const result = await fetchingData(fromSelect);
-  console.log(result);
 
   const rate = result[toSelect];
-  console.log(rate);
 
   toInput.value = exchangeCalculation(fromInput,rate).toFixed(2);
 });
